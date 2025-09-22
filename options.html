@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Site Blocker Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <h1>⚙️ Smart Site Blocker Settings</h1>
+
+    <div id="password-container">
+      <input type="password" id="password-input" placeholder="Enter password" />
+      <button id="unlock-btn">Unlock</button>
+    </div>
+
+    <div id="settings" style="display:none;">
+      <label>Domain:
+        <input type="text" id="domain-input" placeholder="e.g. facebook.com" />
+      </label>
+      <label>Days (0-6, comma separated):
+        <input type="text" id="days-input" placeholder="1,2,3 (leave empty if daily)" />
+      </label>
+      <label>Start Time:
+        <input type="time" id="start-time" />
+      </label>
+      <label>End Time:
+        <input type="time" id="end-time" />
+      </label>
+      <label>
+        <input type="checkbox" id="repeat-daily" />
+        Repeat daily
+      </label>
+      <button id="save-btn">Save</button>
+
+      <h2>Blocked sites:</h2>
+      <ul id="blocked-list"></ul>
+    </div>
+
+    <p id="status"></p>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
